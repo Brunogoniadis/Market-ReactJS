@@ -6,7 +6,9 @@ export default function Header() {
         <Main>
             <div className='content'>
                 <div className='title'>
-                    Market JS
+                    Market 
+                    <h6>.</h6>
+                    JS
                 </div>
 
                 <Input></Input>

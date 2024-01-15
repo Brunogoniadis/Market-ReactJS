@@ -14,10 +14,11 @@ export const StyledInput = styled.div`
         color: var(--color-text);
 
         border-radius: 50px;
+        transition: all ease-in 1s;
     
         :focus-within {
-            border-color: #6663FF;
-
+            border-color: #febd69;
+            transition: all ease-in 300ms;
         } 
         
         input {
@@ -29,7 +30,7 @@ export const StyledInput = styled.div`
     
             color: var(--color-primary);
             border-radius: 50px;
-            border: 5px solid #757575;
+            border: 2px solid #757575;
             padding-left: 5px;
 
         }
