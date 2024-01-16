@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import Slider from 'react-slick';
 
+import arrowLeft from '../../assets/arrowLeft.png'
+import arrowRight from '../../assets/arrowRight.png'
+
 export const CarouselWrapper = styled.div`
     width: 100%;
     height: 420px;
@@ -39,6 +42,50 @@ export const CustomSlider = styled(Slider)`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+
+  .slick-prev,
+  .slick-next {
+    font-size: 0px;
+    background-color: red; 
+    height:100px;
+    background-color: transparent;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: #f2f2f2;
+    transition: all ease 1s;
+  }
+
+  .slick-prev:hover,
+  .slick-next:hover {
+    background-size: 105%;
+    background-color: #d2d2d2;
+
+  }
+
+  .slick-prev {
+    background-image: url(${arrowLeft});
+  }
+
+  .slick-next {
+  background-image: url(${arrowRight});
+  font-size: 0px;
+
+    
+
+  }
+
+  .slick-next:before,  .slick-prev:before {
+      content: '';
+    
+  }
+
+
+
   .slick-list{
     width: 100vw;
     max-width: 1080px;

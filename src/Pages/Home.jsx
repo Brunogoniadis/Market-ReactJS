@@ -3,6 +3,7 @@ import { CarouselBanner } from '../Components/Carousel-Banner/Carousel-Banner'
 import { CardGrid } from '../Components/CardGrid/CardGrid'
 import { MainDiv } from './style'
 import { CarouselCategories } from '../Components/CarouselCategories/CarouselCategories'
+import { Suggestions } from '../Components/Suggestions/Suggestions'
 
 export const Home = () => {
     return (
@@ -16,7 +17,7 @@ export const Home = () => {
 
             <CarouselCategories />
 
-
+            <Suggestions/>
         </MainDiv>
     )
 }
