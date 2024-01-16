@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import Slider from 'react-slick';
 import { CarouselWrapper, CustomSlider } from './style'
 
-export const Carousel = () => {
+export const CarouselBanner = () => {
 
     const settings = {
         dots: false,
@@ -10,9 +9,9 @@ export const Carousel = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 5,
-        autoplay: true,          // Enable autoplay
-        autoplaySpeed: 10,     // Set autoplay speed to 2000 milliseconds (2 seconds)
+        slidesToScroll: 1,
+        autoplay: true,          
+        autoplaySpeed: 3000,     
       };
 
     useEffect(() => {

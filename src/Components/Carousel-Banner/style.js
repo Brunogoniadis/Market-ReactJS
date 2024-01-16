@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 
 export const CarouselWrapper = styled.div`
     width: 100%;
-    height: 396px;
+    height: 720px;
 
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@ export const CustomSlider = styled(Slider)`
   .slick-list{
     width: 100vw;
     max-width: 1920px;
-    height: 396px;
+    height: 720px;
 
     display: grid;
 
@@ -32,10 +32,7 @@ export const CustomSlider = styled(Slider)`
         align-items: center;
         justify-content: center;
         text-decoration: none;
-
     }
-
-
   }
 
 
