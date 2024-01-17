@@ -57,13 +57,12 @@ export const CustomSlider = styled(Slider)`
     border-radius: 5px;
     border: 0px;
     background-color: #f2f2f2;
-    transition: all ease 1s;
+    transition: all ease 500ms;
   }
 
   .slick-prev:hover,
   .slick-next:hover {
-    background-size: 105%;
-    background-color: #d2d2d2;
+    background-color: #d9d9d9;
 
   }
 
@@ -128,7 +127,6 @@ export const Item = styled.div`
   .image{
     height: 160px;
     width: 100%;
-    background-color: blue;
 
   }
 
