@@ -20,16 +20,4 @@ export const MainProduct = styled.div`
         background-color: red;
     }
 
-    .name{
-        width: 100%;
-        height: 2ch;
-    }
-    .price{
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        gap: 0;
-        height: 40px;
-    }
-
 `

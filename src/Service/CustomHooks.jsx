@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 
-const API_URL = 'https://api.escuelajs.co/api/v1';
+const API_URL = 'https://dummyjson.com/products';
 
 export const UseApiCategories = () => {
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    
+
+
 
     useEffect(() => {
         const fetchData = async () => {

@@ -8,15 +8,14 @@ export const MainDiv = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: start;
-
+    background-color: #e3e6e6;
     .grid-items{
-        width: 100%;
-        max-width: 1080px;
+
+        width: 1130px;
         display: grid;
-        grid-template-columns: 310px 310px 310px;
+        grid-template-columns: auto auto auto;
         align-items: center;
         justify-content: space-between;
-
         margin-top: -15vh;
 
     }

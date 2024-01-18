@@ -5,30 +5,31 @@ import arrowLeft from '../../assets/arrowLeft.png'
 import arrowRight from '../../assets/arrowRight.png'
 
 export const CarouselWrapper = styled.div`
-    width: 100%;
-    height: 420px;
+    width: auto;
+    padding: 25px;
+    height: 390px;
+    margin-top: 35px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    background-color: red;
     overflow: hidden;
+    background-color: white;
+    
+
 
     h2{
-      max-width: 1080px;
+      margin-top: 35px;
       display: flex;
       align-items: center;
       justify-content: start;
       width: 100%;
-      background-color: yellow;
-      height: 100%;
       font-size: 25px;
       font-weight: bold;
     }
 
-    margin-top: 35px;
+
 `
 
 export const CustomSlider = styled(Slider)`
@@ -36,18 +37,15 @@ export const CustomSlider = styled(Slider)`
     text-decoration: none;
   }
 
-
-  background-color: green;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
+  position: relative;
 
   .slick-prev,
   .slick-next {
     font-size: 0px;
-    background-color: red; 
     height:100px;
     background-color: transparent;
     background-position: center;
@@ -55,8 +53,8 @@ export const CustomSlider = styled(Slider)`
     background-repeat: no-repeat;
     width: 50px;
     border-radius: 5px;
-    border: 0px;
-    background-color: #f2f2f2;
+    background-color: white;
+    border: 1px solid #C5C5C5;
     transition: all ease 500ms;
   }
 
@@ -68,11 +66,19 @@ export const CustomSlider = styled(Slider)`
 
   .slick-prev {
     background-image: url(${arrowLeft});
+
+    display: flex;
+    position: absolute;
+    left: 0px;
+    z-index: 501;
   }
 
   .slick-next {
   background-image: url(${arrowRight});
-  font-size: 0px;
+  display: flex;
+    position: absolute;
+    right: 0px;
+    z-index: 501;
 
     
 
@@ -96,7 +102,6 @@ export const CustomSlider = styled(Slider)`
 
 
     .slick-track{
-      background-color: red;
       overflow: hidden;
       width: 1080px;
     }
@@ -116,24 +121,36 @@ export const CustomSlider = styled(Slider)`
 export const Item = styled.div`
   width: 210px;
   height: 210px;
-  background-color: red;
   display: flex;
   flex-direction: column; 
   align-items: flex-end; 
   justify-content: flex-end;
   border-radius: 50%;
-  overflow: hidden;
 
   .image{
-    height: 160px;
+    height: 200px;
     width: 100%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    border-radius: 50%;
 
+    background-color: #D2D2D2;
+    z-index: 500;
+      display: flex;
+      position: relative;
   }
 
 
-  .title {
+  .title {    
+    display: flex;
+    position: relative;
+
     width: 210px;
     height: 50px;
-    background-color: yellow;
+    background-color: white;
+    margin-top: -40px;
+    z-index: 501;
+    font-size: 20px;
+    font-weight: bold;
   }
 `;

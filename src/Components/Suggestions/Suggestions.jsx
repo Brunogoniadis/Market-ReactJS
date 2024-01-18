@@ -7,6 +7,9 @@ export const Suggestions = () => {
       <h2>Suggestions</h2>
       <div className='suggestions-wrapper'>
         <ProductFile/>
+        <ProductFile/>
+        <ProductFile/>
+
       </div>
     </MainElement>
   )
