@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { CarouselWrapper, CustomSlider, Item } from './style';
-import { UseApiCategories } from '../../Service/CustomHooks';
+import { UseHookApiCategories } from '../../Service/CustomHooks';
 
 export const CarouselCategories = () => {
-    const { categories, loading, error } = UseApiCategories();
+    const { categories, loading, error } = UseHookApiCategories();
 
     const settings = {
         dots: false,
@@ -41,8 +41,6 @@ export const CarouselCategories = () => {
     };
 
 
-
-    console.log("CATEGORIES", categories);
 
     useEffect(() => {
         // Alguma lógica adicional que pode ser adicionada aqui

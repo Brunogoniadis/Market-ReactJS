@@ -8,16 +8,14 @@ export const MainProduct = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    padding: 1rem;
 
     .picture{
-        width: 100%;
-        height: 250px;
+        width: auto;
+        height: 275px;
 
-        background-size: contain;
+        background-size: 50%;
         background-position: center;
         object-fit: cover;
-        background-color: red;
     }
 
 `

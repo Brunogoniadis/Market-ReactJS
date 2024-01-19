@@ -1,16 +1,20 @@
-import React from 'react'
-import { MainElement } from './style'
+import React from 'react';
+import { MainElement } from './style';
 
 export const CardGrid = (props) => {
   return (
     <MainElement>
-      <div className='title'>
-        {props.title}
+      {props.img && (
+        <>
+          <div className='title'>
+            {props.title}
+          </div>
 
-      </div>
-      <div className='image-container'>
-        teste
-      </div>
+          <img className='image-container' src={props.img} loading="lazy" alt="Descrição da imagem" />
+
+          <div className="price">$12,00</div>
+        </>
+      )}
     </MainElement>
-  )
-}
+  );
+};

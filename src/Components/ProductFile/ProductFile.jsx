@@ -1,12 +1,12 @@
 import React from 'react'
 import { MainProduct } from './ProductFile'
 
-export const ProductFile = () => {
+export const ProductFile = (props) => {
     return (
         <MainProduct>
-            <div className='picture'>
-                
-            </div>
+            <img className='picture'
+                src={props.img}
+            />
 
         </MainProduct>
     )

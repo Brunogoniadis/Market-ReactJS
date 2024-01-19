@@ -75,27 +75,26 @@ export default createGlobalStyle`
   a {
     text-decoration: none;
   }
+  /*  Scrollbar  */
 
-  /* width */
-  ::-webkit-scrollbar {
-    width: 6px;
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color:#131921 #e3e6e6;
   }
 
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.3);
-    margin: 1rem;
-    border-radius: 1.6rem;
+  /* Chrome, Edge,  Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
   }
 
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #fff;
-    border-radius: 1.6rem;
+  *::-webkit-scrollbar-track {
+    background: #e3e6e6;
   }
 
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #fff;
+  *::-webkit-scrollbar-thumb {
+    background-color: #131921;
+    border-radius: 10px;
+    border: 3px solid #e3e6e6;
   }
 `;
