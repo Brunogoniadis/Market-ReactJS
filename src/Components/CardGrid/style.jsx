@@ -67,7 +67,7 @@ export const MainElement = styled.div`
         font-weight: bold;
         padding-left: 22px;
         
-        animation: ${ColorFont} 850ms ease;
+        animation: ${ColorFont} 2s ease;
     }
 
     .image-container{

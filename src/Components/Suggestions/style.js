@@ -7,6 +7,7 @@ width: auto;
     padding: 25px;
     height: 390px;
     margin-top: 35px;
+    margin-bottom: 35px;
     width: 1130px;
     display: flex;
     flex-direction: column;
@@ -34,6 +35,6 @@ width: auto;
         justify-content: space-around;
     }
     
-    margin-bottom: 15px;
+
 
 `
