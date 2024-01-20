@@ -9,7 +9,6 @@ export const CarouselWrapper = styled.div`
     align-items: center;
     justify-content: center;
 
-    background-color: red;
     overflow: hidden;
 `
 
@@ -17,11 +16,15 @@ export const CustomSlider = styled(Slider)`
   *{
     text-decoration: none;
   }
-  background-color: green;
+  width: 100vw;
+
+
+    height: 720px;
+
   .slick-list{
     width: 100vw;
     max-width: 1920px;
-    height: 720px;
+    height: 100%;
 
     display: grid;
 
@@ -32,9 +35,20 @@ export const CustomSlider = styled(Slider)`
         align-items: center;
         justify-content: center;
         text-decoration: none;
-    }
+        width: 100%;
+      height: 720px;
+      }
   }
 
+`
 
+export const ImageWrapper = styled.img`
+      width: 100%;
+      height: 720px;
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      
 `

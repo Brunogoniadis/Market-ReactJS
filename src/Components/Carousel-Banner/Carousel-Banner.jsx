@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { CarouselWrapper, CustomSlider } from './style'
+import { CarouselWrapper, CustomSlider, ImageWrapper } from './style'
+import frameSlide1 from '../../assets/frameslide1.png'
 
 export const CarouselBanner = () => {
 
@@ -10,9 +11,9 @@ export const CarouselBanner = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,          
-        autoplaySpeed: 3000,     
-      };
+        autoplay: false,
+        autoplaySpeed: 3000,
+    };
 
     useEffect(() => {
         // Optionally, you can add any additional initialization logic here
@@ -21,16 +22,11 @@ export const CarouselBanner = () => {
     return (
         <CarouselWrapper>
             <CustomSlider {...settings}>
-                <div>
-                    <h3>Slide 1</h3>
-                </div>
 
                 <div>
-                    <h3>Slide 2</h3>
-                </div>
-
-                <div>
-                    <h3>Slide 3</h3>
+                    <ImageWrapper
+                        src={frameSlide1}
+                    />
                 </div>
 
             </CustomSlider>
