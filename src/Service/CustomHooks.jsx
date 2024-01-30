@@ -58,3 +58,27 @@ export const UseHookBestItem = (category) => {
 
     return { bestItem, loading, error };
 };
+
+export const UseHookProduct = (product) => {
+    const [productState, setProductState] = useState();
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const getProduct = async () => {
+            try {
+                const response = await fetch(`${API_URL}/${product}`)
+                const data = await response.json()
+
+                setProductState(data)
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        }
+        getProduct();
+    }, [product])
+
+    return { productState, loading, error };
+}

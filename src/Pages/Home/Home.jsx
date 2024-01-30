@@ -1,10 +1,10 @@
 import React from 'react'
-import { CarouselBanner } from '../Components/Carousel-Banner/Carousel-Banner'
-import { CardGrid } from '../Components/CardGrid/CardGrid'
+import { CarouselBanner } from '../../Components/Carousel-Banner/Carousel-Banner'
+import { CardGrid } from '../../Components/CardGrid/CardGrid'
 import { MainDiv } from './style'
-import { CarouselCategories } from '../Components/CarouselCategories/CarouselCategories'
-import { Suggestions } from '../Components/Suggestions/Suggestions'
-import { UseHookBestItem } from '../Service/CustomHooks'
+import { CarouselCategories } from '../../Components/CarouselCategories/CarouselCategories'
+import { Suggestions } from '../../Components/Suggestions/Suggestions'
+import { UseHookBestItem } from '../../Service/CustomHooks'
 
 export const Home = () => {
     const { bestItem: bestWatch, loading: loadingWatch, error: errorWatch } = UseHookBestItem('womens-watches');
