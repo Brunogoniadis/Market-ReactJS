@@ -56,6 +56,7 @@ export default createGlobalStyle`
     text-decoration: none;
   }
 
+  
   h1 {
     font-size: 28px;
   }
