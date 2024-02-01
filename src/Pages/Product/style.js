@@ -28,34 +28,46 @@ export const MainScreen = styled.div`
         width: 45%;
         object-fit: cover;
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         flex-direction: column;
-
     }
 
     .item-picture{
-        height: 500px;
+        height: 480px;
         width: 100%;
         object-fit: cover;
+
+        @media (max-width: 1366px) {
+            height: 380px;
+        }
     }
     .item-images-wrapper {
         width: 100%;
         height: 20%;
         display: grid;
         overflow: hidden;
-        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr)); /* Colunas automáticas */
+        grid-template-columns: auto auto auto auto;
         justify-content: space-between;
-        align-items: center; 
-        gap: 4px;
+        align-items: center;
     }
 
-    .image-container {
+    .mini-image-button {
         display: flex;
         object-fit: cover;
         background-position: center;
         background-size: cover;
-        width: 100%;
-        height: 100%;
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        border: solid 3px grey;
+
+
     }
+    .mini-image-button:active {
+        border: solid 3px #febd69;
+    }
+
     .description-wrapper{
         width: 50%;
         height: 500px;
