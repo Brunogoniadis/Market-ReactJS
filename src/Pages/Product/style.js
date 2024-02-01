@@ -33,7 +33,7 @@ export const MainScreen = styled.div`
     }
 
     .item-picture{
-        height: 100%;
+        height: 500px;
         width: 100%;
         object-fit: cover;
     }
@@ -42,9 +42,10 @@ export const MainScreen = styled.div`
         height: 20%;
         display: grid;
         overflow: hidden;
-        grid-template-columns: 22% 22% 22% 22%;
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr)); /* Colunas automáticas */
         justify-content: space-between;
         align-items: center; 
+        gap: 4px;
     }
 
     .image-container {
@@ -55,13 +56,18 @@ export const MainScreen = styled.div`
         width: 100%;
         height: 100%;
     }
-    .text-container{
+    .description-wrapper{
         width: 50%;
-        height: 100%;
+        height: 500px;
 
-        margin: 15px;
+        margin: 0px 15px;
         border-radius: 10px;
         border: 1px solid grey;
+        align-self: flex-start;
+
+        @media (max-width: 1366px) {
+            height: 500px;
+        }
 
         h3{
             font-size: 22px;
@@ -86,7 +92,22 @@ export const MainScreen = styled.div`
             width: 150px;
             height: 50px;
 
-            background-color: blue;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+
+            img{
+                width: auto;
+                height: 15px;
+                background-position: center;
+                background-size: contain;
+                object-fit: contain;
+                padding: 0;
+                margin: 5px;
+
+            }
         }
 
         .price-container{

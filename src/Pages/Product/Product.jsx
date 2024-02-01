@@ -6,36 +6,31 @@ import halfstar from '../../assets/halfStar.png';
 
 export const Product = () => {
 
-    const { productState, loading, error } = UseHookProduct(4);
+    const { productState, loading, error } = UseHookProduct(2);
 
 
-    const [rating, setRating] = useState(4.3); // Defina a classificação inicial do produto
 
-    function ProductRating({ rating }) {
-        const renderStars = () => {
-            const fullStars = Math.floor(rating);
-            const hasHalfStar = rating - fullStars >= 0.5;
+    function RenderStars() {
+        const rating = productState?.rating;
+        const ratingInt = Math.floor(rating);
+        const ratingDecimal = (rating - ratingInt).toFixed(2).substring(1);
 
-            const stars = [];
+        const stars = [];
 
-            for (let i = 0; i < fullStars; i++) {
-                stars.push(<img key={`star-${i}`} src={star} alt="Full Star" />);
-            }
+        for (let i = 0; i < ratingInt; i++) {
+            stars.push(<img key={i} src={star} alt="Full Star" />);
+        }
 
-            if (hasHalfStar) {
-                stars.push(<img key={`half-star`} src={halfstar} alt="Half Star" />);
-            }
-
-            return stars;
-        };
+        if (ratingDecimal >= 0.5) {
+            stars.push(<img key="half" src={halfstar} alt="Half Star" />);
+        }
 
         return (
             <div className="stars-wrapper">
-                {renderStars()}
+                {stars}
             </div>
         );
     }
-
 
 
     console.log("produto", productState)
@@ -53,16 +48,16 @@ export const Product = () => {
                         ))}
                     </div>
                 </div>
-                <div className="text-container">
+                <div className="description-wrapper">
                     <div className='title-container'>
                         <h2>
                             {productState?.title}
                         </h2>
                     </div>
 
-                    <div className="stars-wrapper">
-                        {renderStars()}
-                    </div>
+                    {RenderStars()}
+
+
                     <div>
 
                         <p>{productState?.description}</p>
