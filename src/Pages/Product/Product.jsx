@@ -1,36 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { MainScreen } from './style';
 import { UseHookProduct } from '../../Service/CustomHooks';
+import { StarsCalc } from '../../Components/StarsCalc/StarsCalc'
 import star from '../../assets/fullStar.png';
 import halfstar from '../../assets/halfStar.png';
+
 
 export const Product = () => {
     const { productState, loading, error } = UseHookProduct(2);
     const [mainImage, setMainImage] = useState(productState?.thumbnail);
 
+    const [rating, setRating] = useState('');
 
-
-    function RenderStars() {
-        const rating = productState?.rating;
-        const ratingInt = Math.floor(rating);
-        const ratingDecimal = (rating - ratingInt).toFixed(2).substring(1);
-
-        const stars = [];
-
-        for (let i = 0; i < ratingInt; i++) {
-            stars.push(<img key={i} src={star} alt="Full Star" />);
-        }
-
-        if (ratingDecimal >= 0.5) {
-            stars.push(<img key="half" src={halfstar} alt="Half Star" />);
-        }
-
-        return (
-            <div className="stars-wrapper">
-                {stars}
-            </div>
-        );
-    }
+    useEffect(() => {
+        setRating(productState?.rating)
+    }, [])
 
     return (
         <MainScreen>
@@ -54,7 +38,8 @@ export const Product = () => {
                         <h2>{productState?.title}</h2>
                     </div>
 
-                    {RenderStars()}
+                    <StarsCalc rating={productState?.rating} />
+
 
                     <div>
                         <p>{productState?.description}</p>

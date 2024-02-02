@@ -34,7 +34,7 @@ export const MainScreen = styled.div`
     }
 
     .item-picture{
-        height: 480px;
+        height: 560px;
         width: 100%;
         object-fit: cover;
 
@@ -57,10 +57,11 @@ export const MainScreen = styled.div`
         object-fit: cover;
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
         width: 100px;
         height: 100px;
         padding: 5px;
-        border: solid 3px grey;
+        border: solid 3px #f0f0f0;
 
 
     }
