@@ -3,23 +3,24 @@ import styled from "styled-components";
 export const StarsWrapper = styled.div`
 
     width: 150px;
-    height: 50px;
+    height: 10px;
 
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    margin: 15px !important;
+    margin: 0px !important;
+    padding: 0 !important;
 
     img{
         width: auto;
-        height: 15px;
+        height: 10px;
         background-position: start;
         background-size: contain;
         object-fit: contain;
         padding: 0;
-        margin: 10px !important;
-
+        margin: 0px !important;
+        
     }
 `

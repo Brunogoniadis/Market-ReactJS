@@ -43,7 +43,7 @@ export const CarouselCategories = () => {
 
 
     useEffect(() => {
-        // Alguma lógica adicional que pode ser adicionada aqui
+        console.log('categories', categories)
     }, []);
 
     return (

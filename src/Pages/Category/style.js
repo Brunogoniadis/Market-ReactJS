@@ -29,31 +29,41 @@ export const MainScreen = styled.div`
 
 
 
-        .aside-filter{
-            width: 20%;
-            height: 100%;
-            background-color: red;
-        }
+
         .main-content{
             
-            width: 80%;
+            width: 100%;
             height: 100%;
             background-color: green;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         
-            .title-container{
+            .title-wrapper{
                 height: 75px;
                 width: 100%;
                 background-color: red;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
                 flex-direction: row;
                 padding: 35px;
-            
+
+                .title-container{
+                    width: 1130px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    padding: 35px;
+                }
             }
             .product-wrapper{
                 display: grid;
                 grid-template-columns: auto auto auto auto;
+                padding: 5px;
+                gap: 15px;
+                width: 1000px;
                 justify-content: space-around;
             }
         }

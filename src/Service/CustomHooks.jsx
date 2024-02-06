@@ -28,7 +28,6 @@ export const UseHookApiCategories = () => {
 
     return { categories, loading, error };
 };
-
 export const UseHookBestItem = (category) => {
     const [bestItem, setBestItem] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -58,7 +57,6 @@ export const UseHookBestItem = (category) => {
 
     return { bestItem, loading, error };
 };
-
 export const UseHookProduct = (product) => {
     const [productState, setProductState] = useState();
     const [loading, setLoading] = useState(true);
@@ -81,4 +79,30 @@ export const UseHookProduct = (product) => {
     }, [product])
 
     return { productState, loading, error };
+}
+
+export const UseHookItemsByCategory = (category) => {
+    const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    console.log('category', `${API_URL}/category/${category}`)
+
+    useEffect(() => {
+        const fetchItemsByCategory = async () => {
+            try {
+                const response = await fetch(`${API_URL}/category/${category}`)
+                const data = await response.json();
+                setItems(data.products);
+
+            } catch (error) {
+                setError(error);
+                setLoading(false);
+            }
+        };
+
+        fetchItemsByCategory();
+    }, [category]);
+
+    return { items, loading, error };
 }

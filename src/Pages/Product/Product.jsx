@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { MainScreen } from './style';
 import { UseHookProduct } from '../../Service/CustomHooks';
 import { StarsCalc } from '../../Components/StarsCalc/StarsCalc'
-import star from '../../assets/fullStar.png';
-import halfstar from '../../assets/halfStar.png';
-
 
 export const Product = () => {
     const { productState, loading, error } = UseHookProduct(2);
@@ -15,6 +12,10 @@ export const Product = () => {
     useEffect(() => {
         setRating(productState?.rating)
     }, [])
+
+    useEffect(() => {
+        console.log('productState', productState)
+    })
 
     return (
         <MainScreen>
