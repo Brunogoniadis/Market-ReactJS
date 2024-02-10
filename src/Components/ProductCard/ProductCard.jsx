@@ -5,7 +5,6 @@ import { StarsCalc } from '../../Components/StarsCalc/StarsCalc'
 
 export const ProductCard = (props) => {
 
-    console.log('props', props)
     return (
         <MainProduct>
             <img className="image-wrapper"

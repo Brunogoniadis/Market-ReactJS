@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MainScreen } from './style'
 import { ProductCard } from '../../Components/ProductCard/ProductCard'
 
@@ -6,9 +6,12 @@ import { UseHookItemsByCategory } from '../../Service/CustomHooks'
 
 export const Category = () => {
 
-    const { items, loading, error } = UseHookItemsByCategory('smartphones');
+    const [paramFilter, setParamFilter] = useState('price')
+    const [paramOrder, setParamOrder] = useState('desc')
 
-    console.log(items);
+
+    const { items, loading, error } = UseHookItemsByCategory('smartphones', true, paramOrder, paramFilter);
+
 
 
     return (

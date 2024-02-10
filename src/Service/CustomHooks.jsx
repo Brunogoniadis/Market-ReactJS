@@ -81,28 +81,50 @@ export const UseHookProduct = (product) => {
     return { productState, loading, error };
 }
 
-export const UseHookItemsByCategory = (category) => {
+export const UseHookItemsByCategory = (category, sort, order, paramFilter) => {
     const [items, setItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    console.log('category', `${API_URL}/category/${category}`)
-
     useEffect(() => {
         const fetchItemsByCategory = async () => {
             try {
-                const response = await fetch(`${API_URL}/category/${category}`)
+                const response = await fetch(`${API_URL}/category/${category}`);
                 const data = await response.json();
-                setItems(data.products);
 
+                if (sort) {
+                    const sortedItems = data.products.slice().sort((a, b) => {
+                        // Verificar se o parâmetro de filtro é 'price' ou 'rating'
+                        if (paramFilter === 'price') {
+                            if (order === 'desc') {
+                                return b.price - a.price;
+                            } else {
+                                return a.price - b.price;
+                            }
+                        } else if (paramFilter === 'rating') {
+                            if (order === 'desc') {
+                                return b.rating - a.rating;
+                            } else {
+                                return a.rating - b.rating;
+                            }
+                        }
+
+
+                        return 0;
+                    });
+                    setItems(sortedItems);
+                } else {
+                    setItems(data.products);
+                }
             } catch (error) {
                 setError(error);
+            } finally {
                 setLoading(false);
             }
         };
 
         fetchItemsByCategory();
-    }, [category]);
+    }, [category, sort, order, paramFilter]);
 
     return { items, loading, error };
-}
+};

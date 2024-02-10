@@ -9,7 +9,6 @@ export const StarsCalc = ({rating}) => {
 
     useEffect(() => {
         calculateStars();
-        console.log('stars', rating)
     }, [rating]);
 
 

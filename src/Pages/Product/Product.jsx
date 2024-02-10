@@ -13,9 +13,7 @@ export const Product = () => {
         setRating(productState?.rating)
     }, [])
 
-    useEffect(() => {
-        console.log('productState', productState)
-    })
+
 
     return (
         <MainScreen>
@@ -39,7 +37,11 @@ export const Product = () => {
                         <h2>{productState?.title}</h2>
                     </div>
 
-                    <StarsCalc rating={productState?.rating} />
+                    <div>
+
+                        <StarsCalc rating={productState?.rating}/>
+
+                    </div>
 
 
                     <div>
