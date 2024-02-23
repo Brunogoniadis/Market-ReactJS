@@ -33,14 +33,27 @@ export const Category = () => {
             <div className="title-container">
               <p>teste</p>
               <div className="order-containers">
-                <select value={paramFilter} onChange={handleParamFilterChange}>
-                  <option value="price">Price</option>
-                  <option value="rating">Rating</option>
-                </select>
-                <select value={orderFilter} onChange={handleOrderFilterChange}>
-                  <option value="desc">Desc</option>
-                  <option value="asc">Asc</option>
-                </select>{" "}
+                <div className="select-wrapper">
+                  <p>Order Filter:</p>
+                  <select
+                    value={paramFilter}
+                    onChange={handleParamFilterChange}
+                  >
+                    <option value="price">Price</option>
+                    <option value="rating">Rating</option>
+                  </select>
+                </div>
+                <div className="select-wrapper">
+                  <p>Order by:</p>
+
+                  <select
+                    value={orderFilter}
+                    onChange={handleOrderFilterChange}
+                  >
+                    <option value="desc">Desc</option>
+                    <option value="asc">Asc</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>

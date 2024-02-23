@@ -34,7 +34,7 @@ export const MainScreen = styled.div`
             
             width: 100%;
             height: 100%;
-            background-color: green;
+            background-color: #e3e6e6;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -42,12 +42,15 @@ export const MainScreen = styled.div`
             .title-wrapper{
                 height: 75px;
                 width: 100%;
-                background-color: red;
+                background-color: #e3e6e6;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-direction: row;
-                padding: 35px;
+                border-top: 1px solid black;
+                border-right: 0;
+                border-bottom: 1px solid black;
+                border-left: 0;
 
                 .title-container{
                     width: 1130px;
@@ -55,12 +58,23 @@ export const MainScreen = styled.div`
                     align-items: center;
                     justify-content: space-between;
                     flex-direction: row;
-                    padding: 35px;
-                
+                    padding: 0px 35px 0px 35px;
+                    height: 100%;
                 .order-containers{
                     display: flex;
                     flex-direction: row;
                     display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    height: 100%;
+
+                }
+                .select-wrapper{
+                    display: flex;
+                        height: 100%;
+
+                    flex-direction: column;
+                    justify-content: space-evenly;
                     align-items: center;
                 }
                 }

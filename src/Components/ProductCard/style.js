@@ -4,7 +4,6 @@ export const MainProduct = styled.div`
     width: 210px;
     height: 230px;
 
-    background-color: grey;
 
     display: flex;
     flex-direction: column;
