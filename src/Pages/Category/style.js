@@ -56,6 +56,13 @@ export const MainScreen = styled.div`
                     justify-content: space-between;
                     flex-direction: row;
                     padding: 35px;
+                
+                .order-containers{
+                    display: flex;
+                    flex-direction: row;
+                    display: flex;
+                    align-items: center;
+                }
                 }
             }
             .product-wrapper{
